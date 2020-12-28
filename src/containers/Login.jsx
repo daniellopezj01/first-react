@@ -3,6 +3,8 @@ import googleIcon from "../assets/static/google-icon.png";
 import twitterIcon from "../assets/static/twitter-icon.png";
 import "../assets/styles/components/Login.scss";
 
+// prueba de merge
+
 const Login = () => (
   <section className="login">
     <section className="login__container">
