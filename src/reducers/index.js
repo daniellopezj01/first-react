@@ -17,6 +17,18 @@ const reducer = (state, action) => {
       return {
         ...state, user: action.payload
       }
+    case 'REGISTER_REQUEST':
+      return {
+        ...state, user: action.payload
+      }
+    case 'GET_VIDEO_SOURCE':
+      const id = Number(action.payload)
+      return {
+        ...state,
+        playing: state.trends.find(item => item.id === id)
+          || state.originals.find(item => item.id === id)
+          || {}
+      }
     default:
       console.log('no se encontro el action type en reducer')
       return state;
